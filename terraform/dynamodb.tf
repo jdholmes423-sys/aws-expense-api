@@ -4,7 +4,7 @@ resource "aws_dynamodb_table" "expenses" {
   
   hash_key       = "expense_id"
   
- attribute {
+  attribute {
     name = "expense_id"
     type = "S"
   }
