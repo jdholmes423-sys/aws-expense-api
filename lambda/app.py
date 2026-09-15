@@ -12,7 +12,7 @@ table = dynamodb.Table(TABLE_NAME)
 
 
 def lambda_handler(event, context):
-    http_method = event["httpMethod"]
+    http_method = event["requestContext"]["http"]["method"]
 
     if http_method == "POST":
         return create_expense(event)
